@@ -16,3 +16,19 @@ for index, fruit in with_index(fruits, start=1):
 2. kitty
 3. warm
 4. fuzzy
+
+
+#Task2 
+#Create your own implementation of a built-in function range, named in_range(), which takes three parameters: `start`, `end`, and optional step. Tips: See the documentation for `range` function
+
+
+def in_range(start, end=None, step=1):
+    if end is None:
+        end = start
+        start = 0
+    result = []
+    i = start
+    while (step > 0 and i < end) or (step < 0 and i > end):
+        result.append(i)
+        i += step
+    return result
